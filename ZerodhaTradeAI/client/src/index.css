@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 214 35% 6%; /* #0D1117 */
+  --foreground: 0 0% 88%; /* #E0E0E0 */
+  
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 0 0% 63.9%; /* #BDBDBD */
+  
+  --popover: 214 35% 6%; /* #0D1117 */
+  --popover-foreground: 0 0% 88%; /* #E0E0E0 */
+  
+  --card: 224 32% 19%; /* #1E2642 */
+  --card-foreground: 0 0% 88%; /* #E0E0E0 */
+  
+  --border: 224 27% 31%; /* #1E2642 */
+  --input: 224 32% 19%; /* #1E2642 */
+  
+  --primary: 224 100% 50%; /* #2962FF */
+  --primary-foreground: 0 0% 100%; /* #FFFFFF */
+  
+  --secondary: 225 27% 31%; /* #1E2642 */
+  --secondary-foreground: 0 0% 88%; /* #E0E0E0 */
+  
+  --accent: 226 100% 50%; /* #2962FF */
+  --accent-foreground: 0 0% 98%; /* #FAFAFA */
+  
+  --destructive: 14 100% 50%; /* #FF3D00 */
+  --destructive-foreground: 0 0% 98%; /* #FAFAFA */
+  
+  --success: 142 100% 39%; /* #00C853 */
+  --success-foreground: 0 0% 98%; /* #FAFAFA */
+  
+  --warning: 45 100% 50%; /* #FFC107 */
+  --warning-foreground: 0 0% 8%; /* #141414 */
+  
+  --ring: 224 100% 50%; /* #2962FF */
+  --radius: 0.5rem;
+  
+  --primary-dark: 224 40% 8%; /* #10162F */
+  --primary-light: 224 32% 19%; /* #1E2642 */
+
+  --sidebar-background: 226 43% 11%; /* #090E1F */
+  --sidebar-foreground: 0 0% 88%; /* #E0E0E0 */
+  --sidebar-primary: 220 100% 76%; /* #5E8FFF */
+  --sidebar-primary-foreground: 0 0% 100%; /* #FFFFFF */
+  --sidebar-accent: 224 32% 19%; /* #1E2642 */
+  --sidebar-accent-foreground: 0 0% 88%; /* #E0E0E0 */
+  --sidebar-border: 224 27% 31%; /* #1E2642 */
+  --sidebar-ring: 224 100% 50%; /* #2962FF */
+
+  --chart-1: 142 100% 39%; /* #00C853 */
+  --chart-2: 14 100% 50%; /* #FF3D00 */
+  --chart-3: 45 100% 50%; /* #FFC107 */
+  --chart-4: 224 100% 50%; /* #2962FF */
+  --chart-5: 280 100% 50%; /* #AA00FF */
+}
+
+.dark {
+  --background: 214 35% 6%; /* #0D1117 */
+  --foreground: 0 0% 88%; /* #E0E0E0 */
+  
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 0 0% 63.9%; /* #BDBDBD */
+  
+  --popover: 214 35% 6%; /* #0D1117 */
+  --popover-foreground: 0 0% 88%; /* #E0E0E0 */
+  
+  --card: 224 32% 19%; /* #1E2642 */
+  --card-foreground: 0 0% 88%; /* #E0E0E0 */
+  
+  --border: 224 27% 31%; /* #1E2642 */
+  --input: 224 32% 19%; /* #1E2642 */
+  
+  --primary: 224 100% 50%; /* #2962FF */
+  --primary-foreground: 0 0% 100%; /* #FFFFFF */
+  
+  --secondary: 225 27% 31%; /* #1E2642 */
+  --secondary-foreground: 0 0% 88%; /* #E0E0E0 */
+  
+  --accent: 226 100% 50%; /* #2962FF */
+  --accent-foreground: 0 0% 98%; /* #FAFAFA */
+  
+  --destructive: 14 100% 50%; /* #FF3D00 */
+  --destructive-foreground: 0 0% 98%; /* #FAFAFA */
+  
+  --success: 142 100% 39%; /* #00C853 */
+  --success-foreground: 0 0% 98%; /* #FAFAFA */
+  
+  --warning: 45 100% 50%; /* #FFC107 */
+  --warning-foreground: 0 0% 8%; /* #141414 */
+  
+  --ring: 224 100% 50%; /* #2962FF */
+  --radius: 0.5rem;
+  
+  --primary-dark: 224 40% 8%; /* #10162F */
+  --primary-light: 224 32% 19%; /* #1E2642 */
+
+  --sidebar-background: 226 43% 11%; /* #090E1F */
+  --sidebar-foreground: 0 0% 88%; /* #E0E0E0 */
+  --sidebar-primary: 220 100% 76%; /* #5E8FFF */
+  --sidebar-primary-foreground: 0 0% 100%; /* #FFFFFF */
+  --sidebar-accent: 224 32% 19%; /* #1E2642 */
+  --sidebar-accent-foreground: 0 0% 88%; /* #E0E0E0 */
+  --sidebar-border: 224 27% 31%; /* #1E2642 */
+  --sidebar-ring: 224 100% 50%; /* #2962FF */
+
+  --chart-1: 142 100% 39%; /* #00C853 */
+  --chart-2: 14 100% 50%; /* #FF3D00 */
+  --chart-3: 45 100% 50%; /* #FFC107 */
+  --chart-4: 224 100% 50%; /* #2962FF */
+  --chart-5: 280 100% 50%; /* #AA00FF */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground overflow-x-hidden;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-secondary;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary rounded-md;
+}
+
+.telegram-message {
+  @apply border-l-[3px] border-primary;
+}
+
+.stock-card {
+  @apply transition-transform duration-200;
+}
+
+.stock-card:hover {
+  @apply transform -translate-y-1;
+}
+
+.toggle-checkbox:checked {
+  @apply right-0 border-[color:var(--success)] bg-[color:var(--success)];
+}
+
+.toggle-checkbox:checked + .toggle-label {
+  @apply bg-[color:var(--success)] bg-opacity-30;
+}
+
+.candlestick-chart {
+  @apply h-[400px] w-full rounded-md;
+}
